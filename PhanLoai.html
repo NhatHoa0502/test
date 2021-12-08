@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./css/phanloai.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="header0">
+        <div  class="borderhead mx-5">
+            <nav class="navbar">
+                <ul class="navbar__list">
+                    <li class="navbar__item navbar__qr">Vào ứng dụng</li>
+                    <li class="navbar__item">
+                        <span class="navbar__item navbar__item--nopoint">Kết nối</span>
+                        <a href="" class="navbar__iccon">
+                            <i class="navbar__iccon-fb icon fab fa-facebook"></i>
+                        </a>
+                        <a href="" class="navbar__iccon">
+                            <i class="icon fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+    
+                <ul class="navbar__list">
+                    <li class="navbar__item navbar__item--has-notify">
+                        <a href="" class="navbar___link">
+                            Thông Báo
+                        </a>
+                        <a href="" class="navbar___link">Trợ Giúp</a>
+                    </li>
+                    <li class="navbar__item">Đăng Ký</li>
+                    <li class="navbar__item">Đăng Nhập</li>
+                </ul>
+            </nav>
+            <div class="header-with-search">
+                <a href="./index.html">
+                    <div class="header__logo">
+                        <img class="header__logo-img" src="./img/logopre.png" alt="">
+                    </div>
+                </a>
+                <div class="header__search">
+                    <div class="header__search-input-wrap">
+                        <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm">
+                        <div class="search-history">
+                            <h3 class="search__history-heading">Lich Su Tim Kiem</h3>
+                            <ul class="search__history-list">
+                                <li class="search__history-item">
+                                    <a href="">ASUS</a>
+                                </li>
+                                <li class="search__history-item">
+                                    <a href="">Acer</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="header__search-btn">
+                        <i class="header__search-icon fas fa-search"></i>
+                    </button>
+                </div>
+    
+                <div class="header__cart">
+                    <a href="./shopping.html">
+                        <div class="header__cart-wrap">
+                            <i class="header_cart-icon fas fa-shopping-cart"></i>
+                            <span class="header__cart-notice">0</span>
+                        </div>
+                    </a>
+                </div>
+            </div>  
+        </div>
+    </div>
+        <div class="row mt-4">
+            
+                <div class="col-md-2">
+                    <div class="navmenu">
+                        <div class="menu">
+                            <ul class="nav-menu">
+                                <div class="menu-wrap">
+                                    <li class="nav-menu_list1">
+                                        <i class=" menu-icon fas fa-bars"></i>
+                                        Danh Mục Sản Phẩm
+                                </li>
+                                </div>
+                                <li class="nav-menu_list">
+                                    <a href="./PhanLoai.html" class="category-item__link">Sách Bán Chạy</a>
+                                </li>
+                                <li class="nav-menu_list">
+                                    <a href="./PhanLoai.html" class="category-item__link">Sách Văn Học</a>
+                                </li>
+                                <li class="nav-menu_list">
+                                    <a href="./PhanLoai.html" class="category-item__link">Sách Ngoại Ngữ</a>
+                                </li>
+                                <li class="nav-menu_list">
+                                    <a href="./PhanLoai.html" class="category-item__link">Sách Kinh Doanh</a>
+                                </li>
+                                <li class="nav-menu_list">
+                                    <a href="./PhanLoai.html" class="category-item__link">Kỹ Năng Sống</a>
+                                </li>
+                                <li class="nav-menu_list">
+                                    <a href="./PhanLoai.html" class="category-item__link">Sách Khoa Học</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 ">
+                    <div class="home-filter">
+                        <span class="home-filter__label">Sắp Xếp Theo</span>
+                        <button class="home-filter__btn btn-pre" onclick="ChangeProductList('trend',this)">Phổ Biến</button>
+                        <button class="home-filter__btn btn-pre" onclick="ChangeProductList('new',this)">Mới Nhất</button>
+                        <button class="home-filter__btn btn-pre" onclick="ChangeProductList('sale',this)">Bán Chạy</button>
+
+                        <div class="select-input">
+                            <span class="select-input__label">Giá</span>
+                            <i class="select-input__icon fas fa-chevron-down"></i>
+                            <ul class="select-input__list">
+                                <li class="select-input__item">
+                                    <p href="" class="select-input__link btn-pre" onclick="ChangeProductList('exp',this)">Giá Thấp Đến Cao</p>
+                                </li>
+                                <li class="select-input__item">
+                                    <p href="" class="select-input__link btn-pre" onclick="ChangeProductList('cheap',this)">Gia Cao Đến Thấp</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="home-filter__page">
+                            <span class="home-filter__page-num">
+                                <span class="home-filter__page-current">1</span>/14
+                            </span>
+
+                            <div class="home-filter__page--control">
+                                <a href="" class="home-filter__page-btn">
+                                    <i class="home-filter__page-icon fas fa-chevron-left"></i>
+                                </a>
+                                <a href="" class=" home-filter__page-btn">
+                                    <i class="home-filter__page-icon fas fa-chevron-right" onclick="ChangeProductList('right',this)"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="trend">
+                        <h2 class="mx-3">TOP SÁCH PHỔ BIẾN</h2>
+                        <div class="wrap">
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <a href="">
+                                        <div class="product-img">
+                                            <img class="product-img_size" src="./img/cam_on_nguoi_lon_bia_mem_xp.jpg" alt="">
+                                        </div>
+                                    </a>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Cảm Ơn Người Lớn - Nguyễn Nhật Ánh000000000000000000000000000000000000000000000000000000</h3>
+                                        </div>
+                                        <div class="product-price-wrap mt-1">
+                                            <span class="product-price">172.600</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <a href="">
+                                        <div class="product-img">
+                                            <img class="product-img_size" src="./img/co_gai_den_tu_hom_qua_1_2018_11_16_11_03_46.jpg" alt="">
+                                        </div>
+                                    </a>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Cố Gái Đến Từ Hôm Qua - Nguyễn Nhật Ánh</h3>
+                                        </div>
+                                        <div class="product-price-wrap mt-1">
+                                            <span class="product-price">121.900</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <a href="">
+                                        <div class="product-img">
+                                            <img class="product-img_size" src="./img/image_180164_2_308.jpg" alt="">
+                                        </div>
+                                    </a>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Còn Chút Gì Để Nhớ - Nguyễn Nhật Ánh</h3>
+                                        </div>
+                                        <div class="product-price-wrap mt-1">
+                                            <span class="product-price">180.000</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <a href="">
+                                        <div class="product-img">
+                                            <img class="product-img_size" src="./img/image_220968.jpg" alt="">
+                                        </div>
+                                    </a>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name"><br> Số Đỏ - Vũ Trọng Phụng </h3>
+                                        </div>
+                                        <div class="product-price-wrap mr-1">
+                                            <span class="product-price">990.000</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <a href="">
+                                        <div class="product-img">
+                                            <img class="product-img_size" src="./img/image_195509_1_41170.jpg" alt="">
+                                        </div>
+                                    </a>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Trưởng Ca ACHILLES - MADELINE MILER</h3>
+                                        </div>
+                                        <div class="product-price-wrap mr-1">
+                                            <span class="product-price">990.000</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <a href="">
+                                        <div class="product-img">
+                                            <img class="product-img_size" src="./img/3.jpg" alt="">
+                                        </div>
+                                    </a>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Đầu Tư Chứng Khoán - JHON C.BGLE</h3>
+                                        </div>
+                                        <div class="product-price-wrap mt-1">
+                                            <span class="product-price">172.600</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <a href="">
+                                        <div class="product-img">
+                                            <img class="product-img_size" src="./img/4.jpg" alt="">
+                                        </div>
+                                    </a>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Làm Chủ Thị Trường Chứng Khoán - ROODEY HOBSON</h3>
+                                        </div>
+                                        <div class="product-price-wrap mt-1">
+                                            <span class="product-price">121.900</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <a href="">
+                                        <div class="product-img">
+                                            <img class="product-img_size" src="./img/5.jpg" alt="">
+                                        </div>
+                                    </a>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Phù Thủy Chứng Khoán - JACK D.SGHAGER</h3>
+                                        </div>
+                                        <div class="product-price-wrap mt-1">
+                                            <span class="product-price">180.000</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <a href="">
+                                        <div class="product-img">
+                                            <img class="product-img_size" src="./img/6.jpg" alt="">
+                                        </div>
+                                    </a>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Phân Tích Chứng Khoán - BEJAMIN GRAHAM</h3>
+                                        </div>
+                                        <div class="product-price-wrap mr-1">
+                                            <span class="product-price">990.000</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <a href="">
+                                        <div class="product-img">
+                                            <img class="product-img_size" src="./img/7.jpg" alt="">
+                                        </div>
+                                    </a>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name"><br>Thị Trường Chứng Khoán</h3>
+                                        </div>
+                                        <div class="product-price-wrap mr-1">
+                                            <span class="product-price">990.000</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div id="new">
+                        <h2 class="mx-3">TOP SÁCH MỚi </h2>
+                        <div class="wrap">
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/cam_on_nguoi_lon_bia_mem_xp.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Cảm Ơn Người Lớn - Nguyễn Nhật Ánh</h3>
+                                        </div>
+                                        <div class="product-price-wrap mt-1">
+                                            <span class="product-price">172.600</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/co_gai_den_tu_hom_qua_1_2018_11_16_11_03_46.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Cố Gái Đến Từ Hôm Qua - Nguyễn Nhật Ánh</h3>
+                                        </div>
+                                        <div class="product-price-wrap mt-1">
+                                            <span class="product-price">121.900</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/image_180164_2_308.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Còn Chút Gì Để Nhớ - Nguyễn Nhật Ánh</h3>
+                                        </div>
+                                        <div class="product-price-wrap mt-1">
+                                            <span class="product-price">180.000</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/image_220968.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name"><br> Số Đỏ - Vũ Trọng Phụng </h3>
+                                        </div>
+                                        <div class="product-price-wrap mr-1">
+                                            <span class="product-price">990.000</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/image_195509_1_41170.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Trưởng Ca ACHILLES - MADELINE MILER</h3>
+                                        </div>
+                                        <div class="product-price-wrap mr-1">
+                                            <span class="product-price">990.000</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/3.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Đầu Tư Chứng Khoán - JHON C.BGLE</h3>
+                                        </div>
+                                        <div class="product-price-wrap mt-1">
+                                            <span class="product-price">172.600</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/4.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Làm Chủ Thị Trường Chứng Khoán - ROODEY HOBSON</h3>
+                                        </div>
+                                        <div class="product-price-wrap mt-1">
+                                            <span class="product-price">121.900</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/5.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Phù Thủy Chứng Khoán - JACK D.SGHAGER</h3>
+                                        </div>
+                                        <div class="product-price-wrap mt-1">
+                                            <span class="product-price">180.000</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/6.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Phân Tích Chứng Khoán - BEJAMIN GRAHAM</h3>
+                                        </div>
+                                        <div class="product-price-wrap mr-1">
+                                            <span class="product-price">990.000</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/7.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name"><br>Thị Trường Chứng Khoán</h3>
+                                        </div>
+                                        <div class="product-price-wrap mr-1">
+                                            <span class="product-price">990.000</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div id="sale">
+                        <h2 class="mx-3">TOP SÁCH BÁN CHẠY</h2>
+                        <div class="wrap">
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/cam_on_nguoi_lon_bia_mem_xp.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Cảm Ơn Người Lớn - Nguyễn Nhật Ánh</h3>
+                                        </div>
+                                        <div class="product-price-wrap mt-1">
+                                            <span class="product-price">172.600</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/co_gai_den_tu_hom_qua_1_2018_11_16_11_03_46.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Cố Gái Đến Từ Hôm Qua - Nguyễn Nhật Ánh</h3>
+                                        </div>
+                                        <div class="product-price-wrap mt-1">
+                                            <span class="product-price">121.900</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/image_180164_2_308.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Còn Chút Gì Để Nhớ - Nguyễn Nhật Ánh</h3>
+                                        </div>
+                                        <div class="product-price-wrap mt-1">
+                                            <span class="product-price">180.000</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/image_220968.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name"><br> Số Đỏ - Vũ Trọng Phụng </h3>
+                                        </div>
+                                        <div class="product-price-wrap mr-1">
+                                            <span class="product-price">990.000</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/image_195509_1_41170.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Trưởng Ca ACHILLES - MADELINE MILER</h3>
+                                        </div>
+                                        <div class="product-price-wrap mr-1">
+                                            <span class="product-price">990.000</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/3.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Đầu Tư Chứng Khoán - JHON C.BGLE</h3>
+                                        </div>
+                                        <div class="product-price-wrap mt-1">
+                                            <span class="product-price">172.600</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/4.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Làm Chủ Thị Trường Chứng Khoán - ROODEY HOBSON</h3>
+                                        </div>
+                                        <div class="product-price-wrap mt-1">
+                                            <span class="product-price">121.900</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/5.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Phù Thủy Chứng Khoán - JACK D.SGHAGER</h3>
+                                        </div>
+                                        <div class="product-price-wrap mt-1">
+                                            <span class="product-price">180.000</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/6.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name">Phân Tích Chứng Khoán - BEJAMIN GRAHAM</h3>
+                                        </div>
+                                        <div class="product-price-wrap mr-1">
+                                            <span class="product-price">990.000</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mx-3 my-3 bor">
+                                <div class="cart mt-3">
+                                    <div class="product-img">
+                                        <img class="product-img_size" src="./img/7.jpg" alt="">
+                                    </div>
+                                    <div class="product-infor">
+                                        <div class="product-name-wrap mt-1">
+                                            <h3 class="product-name"><br>Thị Trường Chứng Khoán</h3>
+                                        </div>
+                                        <div class="product-price-wrap mr-1">
+                                            <span class="product-price">990.000</span><sup>d</sup>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <div class="home-product-item__rating">
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                                <i class="rating-icon fas fa-star"></i>
+                                             </div>
+                                             <span class="home-product-item__like">
+                                                <i class="home-product-item__like-icon fas fa-heart"></i>
+                                                <!-- <i class="fas fa-heart"></i> -->
+                                             </span>
+                                        </div>
+                                        <h3>Lượt Đánh Giá</h3>
+                                        <div class="product-button-wrapp mt-1">
+                                            <button type="button" class="btn text-white">THÊM VÀO GIỎ HÀNG</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contain footer-text mx">
+            <div class="row mx-4 pt-4">
+              <div class="col-sm-4">
+                <h2>Về Chúng Tôi</h2>
+                <p>BOOKGONE-Thương Hiệu Sách Bản Quyèn</p>
+                <p>Nhằm mục đích loại bỏ sách lậu,sác giả thương thiệu nên BOOKGONE đã được ra đời để độc giả tiếp cận sách nhanh nhất với giá tốt nhất</p>
+                <h2>THÔNG TIN LIÊN HỆ</h2>
+                <p>Hotline:0888.095.233</p>
+                <p>Địa chỉ:KĐT RESCO,74 Phạm Văn Đồng-Hà Nôik</p>
+              </div>
+              <div class="col-sm-4">
+                <h2>Thời Gian Làm Việc</h2>
+                <p>Cửa Hàng làm việc từ 8-19h hàng ngày,nếu quý khách mua số lượng lơn hoặc đặt sỉ vui lòng liên hệ hotline trê</p>
+                <p>Xin Cảm Ơn</p>
+              </div>
+              <div class="col-sm-4">
+                <h3>Dịch Vụ-Hỗ Trợ</h3>        
+                <p>Điều khoản hỗ trợ-Chính sách đổi trả hoàn tiền</p>
+                <p>Chính sách bảo mật-Chính sách sỉ</p>
+                <p>Giới thiệu BOOKGONE phương thức vận chuyển</p>
+                <p>Hệ thống trung tâm nhà sách-phương thức thanh toán và xuất HD</p>
+              </div>
+            </div>
+        </div>
+    <script src="./jss/phanloai.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
